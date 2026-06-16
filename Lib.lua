@@ -922,23 +922,22 @@ function OrionLib:MakeWindow(WindowConfig)
 					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-			local ToggleSwitchTrack = SetChildren(SetProps(Create("Frame", {
+			local ToggleSwitchTrack = Create("Frame", {
 				BackgroundColor3 = Color3.fromRGB(100, 100, 100),
 				BorderSizePixel = 0,
 				Size = UDim2.new(0, 44, 0, 24),
 				Position = UDim2.new(1, -12, 0.5, 0),
 				AnchorPoint = Vector2.new(1, 0.5)
-			}), {
-				Create("UICorner", {CornerRadius = UDim.new(0, 12)})
-			}), {
-				SetChildren(SetProps(Create("Frame", {
+			}, {
+				Create("UICorner", {CornerRadius = UDim.new(0, 12)}),
+				Create("Frame", {
 					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 					BorderSizePixel = 0,
 					Size = UDim2.new(0, 18, 0, 18),
 					Position = UDim2.new(0, 3, 0.5, 0),
 					AnchorPoint = Vector2.new(0, 0.5),
 					Name = "Thumb"
-				}), {
+				}, {
 					Create("UICorner", {CornerRadius = UDim.new(0, 9)}),
 					SetProps(MakeElement("Stroke"), {
 						Color = Color3.fromRGB(60, 60, 60),
